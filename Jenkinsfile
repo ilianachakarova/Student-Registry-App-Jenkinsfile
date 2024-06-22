@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("Check version"){
             steps{
-                sh 'node --version'
+                bat 'npm install'
             }
         }
     }
