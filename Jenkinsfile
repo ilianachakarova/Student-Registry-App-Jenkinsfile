@@ -16,5 +16,10 @@ pipeline{
                 bat 'npm test'
             }
         }
+        stage("Deploy"){
+            steps{
+                bat 'docker build -t chakarova94/studentsapp .'
+            }
+        }
     }
 }
