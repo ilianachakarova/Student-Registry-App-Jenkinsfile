@@ -19,7 +19,7 @@ pipeline{
         stage("Deploy"){
             steps{
                 bat 'docker build -t chakarova94/studentsapp .'
-                bat 'docker login -u %user% --password %pass%'
+                bat 'docker login -u %username% --password %password%'
                 bat 'docker push chakarova94/studentsapp:latest'
             }
         }
