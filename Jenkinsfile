@@ -18,8 +18,9 @@ pipeline{
         }
         stage("Deploy"){
             steps{
-                input message: 'Approve deployment?', ok: 'Deploy'
                 bat 'docker build -t chakarova94/studentsapp .'
+                bat 'docker login -u %user% --password %pass%'
+                bat 'docker push chakarova94/studentsapp:latest'
             }
         }
     }
