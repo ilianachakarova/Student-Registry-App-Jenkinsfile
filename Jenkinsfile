@@ -1,10 +1,5 @@
 pipeline{
-     agent {
-                docker {
-                    image 'node:current-alpine3.19'
-                    reuseNode true
-                }
-            }
+    agent any
     stages{
         stage("Check version"){
             steps{
